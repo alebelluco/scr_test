@@ -4,3 +4,4 @@ PyPDF2
 numpy
 plotly
 plotly_express
+PyGithub
