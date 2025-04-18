@@ -1,1 +1,6 @@
 streamlit
+pandas
+PyPDF2
+numpy
+plotly
+plotly_express
