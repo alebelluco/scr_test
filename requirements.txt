@@ -6,3 +6,4 @@ plotly
 plotly_express
 PyGithub
 pyAesCrypt
+openpyxl
