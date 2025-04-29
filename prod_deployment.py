@@ -250,7 +250,7 @@ for i in range(len(db_ore)):
     else:
         db_ore.Presenza.iloc[i] = db_ore.Presenza_act.iloc[i]
 
-
+db_ore = db_ore[db_ore.classificazione == 'diretto']
 db_ore['reparto'] = [mans[:3] for mans in db_ore.Mansione.astype(str)]
 ore_group = db_ore[['Data','reparto','Turno','Presenza']].groupby(by=['Data','reparto','Turno'], as_index=False).sum()
 #tengo solo la prima data delle due (il minimo), perchè è quella completa (l'ultimo turno della seconda è parziale)
