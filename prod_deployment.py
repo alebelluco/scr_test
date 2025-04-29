@@ -311,7 +311,7 @@ db_ore_fus['F/mh'] = np.round(db_ore_fus.QTA_PRODOTTA.astype(float) / db_ore_fus
 
 db_fogli_inco = db_fogli[db_fogli.DES_REPARTO == 'INCO'][['turno','QTA_PRODOTTA']].groupby(by='turno', as_index=False).sum()
 db_ore_inco = ore_group[ore_group.reparto == 'INC'].merge(db_fogli_inco, how='left',left_on='Turno',right_on='turno').drop(columns='turno')
-db_ore_inco = db_ore_inco[:-1]
+db_ore_inco = db_ore_inco[:2]
 db_ore_inco['F/mh'] = np.round(db_ore_inco.QTA_PRODOTTA.astype(float) / db_ore_inco.Presenza.astype(float),0)
 
 
