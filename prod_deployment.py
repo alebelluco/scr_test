@@ -264,8 +264,8 @@ ore_group = ore_group[ore_group.Data == data_prima]
 # con uscita reale - ingresso adj calcolo le ore di presenza
 # se sotto le 8 ore, reale, sopra le 8 per meno di 1h: taglio a 8, se sopra le 8 di + di 1 h lo tengo come straordinario
 # caricamento fogli
-db_fogli.columns = db_fogli.iloc[0]
-db_fogli = db_fogli[1:]
+#db_fogli.columns = db_fogli.iloc[0]
+#db_fogli = db_fogli[1:]
 
 db_fogli['Data'] = [data.date() for data in db_fogli.DATA_ATTIVITA]
 db_fogli['orario'] = [data[-5:] for data in db_fogli.DATA_ORA.astype(str)]
