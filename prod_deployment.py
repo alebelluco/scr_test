@@ -115,6 +115,8 @@ if not st.toggle('Nessun nuovo dato, visualizza storico'):
         st.stop()
     
     path_vel = st.sidebar.file_uploader('Caricare kpi_lean')
+    if not path_vel:
+        st.stop()
 
     v_tgt = ut.upload(path_vel, 'VI_LEAN_INDIC_TOT_SAS')
     v_tgt = v_tgt[v_tgt.PROGR_COMMESSA.astype(str)!='nan']
