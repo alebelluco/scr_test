@@ -125,8 +125,8 @@ if not st.toggle('Nessun nuovo dato, visualizza storico'):
         st.sidebar.success('Mansioni caricate correttamente')
         st.sidebar.write(db_mansioni)
         
-    except:
-        st.error('Problema nel caricamento delle mansioni')
+    except Exception as e:
+        st.error(f'Problema nel caricamento delle mansioni: {e}')
         st.stop()
     
 
