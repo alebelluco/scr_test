@@ -31,7 +31,7 @@ with head_dx:
 
 token = st.secrets['token']
 
-token = st.secrets['psw']
+psw = st.secrets['password']
 
 username = st.secrets['username']
 
